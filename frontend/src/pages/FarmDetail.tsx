@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
-import { ArrowLeft, Calendar, MapPin, User, Download, RefreshCw, Loader2 } from 'lucide-react'
+import { ArrowLeft, Calendar, MapPin, User, Download, RefreshCw, Loader2, Satellite, BarChart3 } from 'lucide-react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import FarmMap from '@/components/map/FarmMap'
@@ -112,10 +112,16 @@ export default function FarmDetail() {
             <Download className="mr-2 h-4 w-4" />
             Export
           </Button>
-          <Button asChild>
+          <Button variant="outline" asChild>
             <Link to="/analysis">
               <RefreshCw className="mr-2 h-4 w-4" />
-              Run Analysis
+              Quick Analysis
+            </Link>
+          </Button>
+          <Button asChild>
+            <Link to={`/farms/${id}/analysis`}>
+              <Satellite className="mr-2 h-4 w-4" />
+              Advanced Analysis
             </Link>
           </Button>
         </div>
