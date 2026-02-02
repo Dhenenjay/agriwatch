@@ -5,13 +5,18 @@ python-multipart>=0.0.6
 pydantic>=2.5.0
 pydantic-settings>=2.1.0
 
-# Async and CORS
+# Async and HTTP
 httpx>=0.26.0
 
-# Data processing (minimal)
+# Google Earth Engine
+earthengine-api>=0.1.390
+google-auth>=2.27.0
+
+# Data processing
 numpy>=1.26.0
 shapely>=2.0.0
 pyproj>=3.6.0
+scipy>=1.12.0
 
 # Rate limiting
 slowapi>=0.1.9
