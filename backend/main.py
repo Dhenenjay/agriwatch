@@ -12,7 +12,7 @@ from slowapi import Limiter
 from slowapi.util import get_remote_address
 
 from config import get_settings
-from routers import farms, analysis, indices
+from routers import farms, analysis, indices, advanced_analysis
 
 settings = get_settings()
 
@@ -86,6 +86,7 @@ async def log_requests(request: Request, call_next):
 app.include_router(farms.router, prefix="/api/farms", tags=["Farms"])
 app.include_router(analysis.router, prefix="/api/analysis", tags=["Analysis"])
 app.include_router(indices.router, prefix="/api/indices", tags=["Indices"])
+app.include_router(advanced_analysis.router, prefix="/api", tags=["Advanced Analysis"])
 
 
 @app.get("/health")
