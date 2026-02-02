@@ -24,3 +24,7 @@ Thumbs.db
 # Cache
 .cache/
 .pytest_cache/
+
+# Credentials - NEVER commit
+*credentials*.json
+gcp-key.json
